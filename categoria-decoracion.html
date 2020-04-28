@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- bootstrap-4.3.1-dist CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Fontawesome-free-5.6.3-web CSS -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <!-- bsnav-master CSS -->
+    <link rel="stylesheet" href="assets/bsnav-master/dist/bsnav.min.css">
+    <!-- gijgo-combined CSS -->
+    <link rel="stylesheet" href="assets/gijgo-combined/css/gijgo.min.css">
+    <!-- OwlCarousel2-2.3.4 CSS -->
+    <link rel="stylesheet" href="assets/OwlCarousel2/dist/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel2/dist/owl.theme.default.min.css">
+    <!-- select2 CSS-->
+    <link rel="stylesheet" href="assets/select2/dist/css/select2.min.css">
+    <!-- Template Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+  <title>CYTII - Guía Digital de las empresas, negocios y servicios en la Ciudad de Panamá. </title>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="header navbar navbar-expand-lg bg-secondary bsnav">
+      <div class="container">
+
+        <a class="navbar-brand logo" href="index.html">
+          <img src="images/logo.png" alt="logo" class="img-fluid">
+        </a><!-- /.logo -->        
+
+        <div class="collapse navbar-collapse justify-content-md-start px-lg-4">
+          <ul class="navbar-nav navbar-mobile">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Inicio </a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="quienes-somos.html">Quiénes somos</a>
+
+</li>
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="categorias.html">Categorias</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="eventos.html">Eventos</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="blog.html">Blog</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="membresia.html">Membresia</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="contactos.html">Contactos</a>
+
+            </li>
+
+
+</ul>
+        </div><!-- /.navbar-collapse -->
+        
+
+        
+        <!-- Menu Icon -->
+        <button class="navbar-toggler toggler-spring">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu Icon END -->
+
+      </div><!-- /.container -->
+    </header>
+    <!-- Header END -->
+
+
+    <!-- Login Modal -->
+    <div class="modal login_signup_popup" id="login_modal">
+      <div class="modal-dialog modal-dialog-centered"> 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body"> 
+            <!-- Login -->
+            <h4 class="title text-center mb-5">Login</h4>
+
+            <form class="login_form">
+              <div class="form-group row">
+                <div class="col-12">
+                  <input class="form-control rounded-pill" type="email" placeholder="Enter your Email">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  <input class="form-control rounded-pill" type="password" placeholder="Enter your Password">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label class="custom_checkbox">Remember me
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-sm-6 text-sm-right">
+                  <a class="lost_password" href="#">Lost Your Password?</a>
+                </div>
+              </div>
+              <div class="form-group row my-4">
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary rounded-pill">Login</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="no_account text-center col-12">Don’t have an account ? <a href="javascript:void(0)" class="sign_up_btn" data-target="#signup_dialog" data-toggle="modal" data-dismiss="modal">Sign up</a></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login Modal END --> 
+
+    <!-- Register Modal -->
+    <div class="modal login_signup_popup" id="signup_dialog">
+      <div class="modal-dialog modal-dialog-centered"> 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body"> 
+            <!-- Register -->
+            <h4 class="title text-center mb-5">Register</h4>
+
+            <form class="signUp_form">
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="text" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="password" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="password" placeholder="Retype Password">
+              </div>
+              <div class="form-group my-4">
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary rounded-pill">Login</button>
+                </div>
+              </div>
+            </form>
+            <a href="javascript:void(0)" data-target="#login_modal" data-toggle="modal" data-dismiss="modal"><i class="fa fa-arrow-left"></i> Previous</a> </div>
+        </div>
+      </div>
+    </div>
+    <!-- Register Modal END -->
+    
+      <section class="inner_banner about_inner_banner d-flex align-items-center img_bg py-5 position-relative" style="background:url(images/inner_banner_bg_theme_01.jpg);">
+      <div class="bg-overlay position-absolute"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-white">
+            <h1 class="banner_title mb-0">Categoría - Decoración</h1>
+          </div>
+        </div>
+      </div>
+    </section>  
+    <!-- Top Header serach Section -->
+    <section class="top_header_serach section bg-dark py-3">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12">
+            <div class="search_block_content text-center text-white">
+
+              <form class="search-form">
+                <div class="form-group mx-n2 mb-md-0 d-md-flex flex-md-wrap">
+                  <div class="col-md px-2 col-12">
+                    <input class="form-control rounded-pill" type="text" placeholder="Empresas">
+                  </div>
+                  <div class="col-md px-2 col-12">
+                    <div class="input-group">
+                      <input class="form-control rounded-pill" type="text" placeholder="Localización">
+                      <span class="input-group-addon"><i class="fas fa-map-marker-alt"></i></span>
+                    </div>
+                  </div>
+                  <div class="col-md px-2 col-12">
+                    <select class="form-control js-example-basic-single">
+                      <option selected="selected">Categorías</option>
+                      <option value="">Fitness</option>
+                      <option value="">Nightlife</option>
+                      <option value="">Food</option>
+                      <option value="">Shops</option>
+                      <option value="">Health</option>
+                    </select>
+                  </div>
+                  <div class="col-md-auto px-2 col-12">
+                    <button type="submit" class="btn btn-primary rounded-pill button">Buscador</button>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- Top Header serach Section END -->
+
+    <!-- Item List Section -->
+    <section class="section item_list_section bg-light py-5">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="s-heading-card text-center">
+              <h2>Inmobiliaria</h2>
+              <p>Descubra cómo Cytii puede ayudarlo a encontrar todo lo que desea.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+
+
+          <div class="col-12 pb-lg-5 pb-4">
+            <div class="row search_filter_wrap align-items-center no-gutters">
+              <div class="col-lg-8 col-md-9">
+                <div class="search_option_form">
+                  <form class="form-inline d-md-flex mx-md-n2">
+                  
+               
+               
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-3">
+                <div class="text-right d-none d-md-block">
+                  <ul class="list-inline search_item_tab_block mb-0">
+                    <li class="list-inline-item"><a href="" id="grid_view" class="active"><i class="fas fa-th"></i></a></li>
+                    <li class="list-inline-item"><a href="" id="list_view"><i class="fas fa-th-list"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.col -->
+          <div class="col-12">
+            <div class="search_item_wrap">
+              <div class="row">
+
+                <div class="col-lg-4 col-sm-6 col-12 col-wrap">
+                  <div class="item">
+                    <div class="card product-card">
+<a href="arquitectura.html">
+                        <div class="card-top-body">
+                        <img class="card-img-top product-theme " src="images/para-web-18.png" alt="best-image">
+                        <div class="card-img-overlay product-detail">
+                          <div class="card-body">
+                            <h4 class="card-title font-weight-bold"></h4>
+                            <p><i class="fas fa-map-marker-alt"></i> </p>
+                          </div>
+                        </div>
+                        <div class="wishlist_button position-absolute"><i class="far fa-heart"></i></div>
+                      </div>
+</a>
+                      <div class="card-footer review_block">
+                        <ul class="list-inline reviews">
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        </ul>
+                        <p class="reviews_count">2 Reviews</p>
+                      </div>
+                    </div>
+                  </div><!-- /.item -->
+                </div><!-- /.col -->
+
+                <div class="col-lg-4 col-sm-6 col-12 col-wrap">
+                  <div class="item">
+                    <div class="card product-card">
+<a href="national-brokers.html">
+  
+                      <div class="card-top-body">
+                        <img class="card-img-top product-theme " src="images/para-web-26.png" alt="best-image">
+                        <div class="card-img-overlay product-detail">
+                          <div class="card-body">
+                            <h4 class="card-title font-weight-bold"></h4>
+                            <p><i class="fas fa-map-marker-alt"></i> </p>
+                          </div>
+                        </div>
+                        <div class="wishlist_button position-absolute"><i class="far fa-heart"></i></div>
+                      </div>
+
+</a>
+                      <div class="card-footer review_block">
+                        <ul class="list-inline reviews">
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        </ul>
+                        <p class="reviews_count">2 Reviews</p>
+                      </div>
+                    </div>
+                  </div><!-- /.item -->
+                </div><!-- /.col -->
+
+                <div class="col-lg-4 col-sm-6 col-12 col-wrap">
+                  <div class="item">
+                    <div class="card product-card">
+<a href="imeca.html">
+  
+                      <div class="card-top-body">
+                        <img class="card-img-top product-theme " src="images/para-web-27.png" alt="best-image">
+                        <div class="card-img-overlay product-detail">
+                          <div class="card-body">
+                            <h4 class="card-title font-weight-bold"></h4>
+                            <p><i class="fas fa-map-marker-alt"></i> </p>
+                          </div>
+                        </div>
+                        <div class="wishlist_button position-absolute"><i class="far fa-heart"></i></div>
+                      </div>
+
+</a>
+                      <div class="card-footer review_block">
+                        <ul class="list-inline reviews">
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        </ul>
+                        <p class="reviews_count">2 Reviews</p>
+                      </div>
+                    </div>
+                  </div><!-- /.item -->
+                </div><!-- /.col -->
+                
+
+
+                
+
+
+
+
+              </div>
+              <nav aria-label="Page navigation">
+                <ul class="pagination item_pagination mb-0 justify-content-center">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true"><i class="fas fa-chevron-left"></i></span></a>
+                  </li>
+                  <li class="page-item"><a class="page-link active" href="categorias.html">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next"><span aria-hidden="true"><i class="fas fa-chevron-right"></i></span></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div><!-- /.col -->
+        </div>
+
+      </div>
+    </section>
+    <!-- Item List Section END -->
+
+    <!-- Footer section -->
+    <footer>
+      <div id="footer" class="footer-area bg-secondary py-5">
+        <div class="container">
+          <div class="row">
+         
+            <div class="col-lg-4 col-sm-6">
+              <div class="f_title">
+                <h5></h5>
+              </div>
+              <div class="f_links">
+<img src="images/logo.png">
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="f_title">
+                <h5>Contáctanos</h5>
+              </div>
+              <address class="m-0">
+              <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i> Avenida Santa Elena c/c calle 93 Este, Edif JJ Window Tint, Parque Lefreve Panamá City, Panamá</li>
+                <li><a href="tel:215-123-4567"><i class="fas fa-phone"></i> (507) 66457302</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> ventas@cytii.com</a></li>
+              </ul>
+              </address>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="f_title">
+                <h5>Redes sociales</h5>
+              </div>
+              <div class="f_social_links">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-vk"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-area " style="background-color: black; color: #fff;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="copyright_text">Copyright 2020 © CYTII. Todos los derechos reservados.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section END --> 
+
+    <!-- Back to Top -->
+    <div class='scrolltop'>
+      <div class='scroll'><i class="fas fa-arrow-up"></i></div>
+    </div>
+    <!-- Back to Top End -->
+    
+    <!-- Mobile Menu -->
+    <div class="bsnav-mobile">
+      <div class="bsnav-mobile-overlay"></div>
+      <div class="navbar">
+        <button class="navbar-toggler toggler-spring active close_menu"><span class="navbar-toggler-icon"></span></button>
+      </div>
+    </div>
+
+    
+    <!-- Mobile Menu END -->
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- bootstrap-4.3.1-dist JS -->
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/bsnav-master/dist/bsnav.min.js"></script>
+    <script type="text/javascript" src="assets/gijgo-combined/js/gijgo.min.js"></script>
+    <!-- OwlCarousel2-2.3.4 JS -->
+    <script type="text/javascript" src="assets/OwlCarousel2/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/select2/dist/js/select2.full.min.js"></script>
+    <!-- Template Main JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+  </body>
+</html>

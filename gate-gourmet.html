@@ -1,0 +1,413 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- bootstrap-4.3.1-dist CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Fontawesome-free-5.6.3-web CSS -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <!-- bsnav-master CSS -->
+    <link rel="stylesheet" href="assets/bsnav-master/dist/bsnav.min.css">
+    <!-- gijgo-combined CSS -->
+    <link rel="stylesheet" href="assets/gijgo-combined/css/gijgo.min.css">
+    <!-- OwlCarousel2-2.3.4 CSS -->
+    <link rel="stylesheet" href="assets/OwlCarousel2/dist/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel2/dist/owl.theme.default.min.css">
+    <!-- select2 CSS-->
+    <link rel="stylesheet" href="assets/select2/dist/css/select2.min.css">
+    <!-- Template Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+  <title>CYTII - Guía Digital de las empresas, negocios y servicios en la Ciudad de Panamá. </title>
+</head>
+
+
+  <body>
+
+    <!-- Header -->
+    <header class="header navbar navbar-expand-lg bg-secondary bsnav">
+      <div class="container">
+
+        <a class="navbar-brand logo" href="index.html">
+          <img src="images/logo.png" alt="logo" class="img-fluid">
+        </a><!-- /.logo -->        
+
+        <div class="collapse navbar-collapse justify-content-md-start px-lg-4">
+          <ul class="navbar-nav navbar-mobile">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Inicio </a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="quienes-somos.html">Quiénes somos</a>
+
+</li>
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="categorias.html">Categorias</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="eventos.html">Eventos</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="blog.html">Blog</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="membresia.html">Membresia</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="contactos.html">Contactos</a>
+
+            </li>
+
+
+</ul>
+        </div><!-- /.navbar-collapse -->
+        
+
+        
+        <!-- Menu Icon -->
+        <button class="navbar-toggler toggler-spring">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu Icon END -->
+
+      </div><!-- /.container -->
+    </header>
+    <!-- Header END -->
+
+
+    <!-- Login Modal -->
+    <div class="modal login_signup_popup" id="login_modal">
+      <div class="modal-dialog modal-dialog-centered"> 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body"> 
+            <!-- Login -->
+            <h4 class="title text-center mb-5">Login</h4>
+
+            <form class="login_form">
+              <div class="form-group row">
+                <div class="col-12">
+                  <input class="form-control rounded-pill" type="email" placeholder="Enter your Email">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  <input class="form-control rounded-pill" type="password" placeholder="Enter your Password">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label class="custom_checkbox">Remember me
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-sm-6 text-sm-right">
+                  <a class="lost_password" href="#">Lost Your Password?</a>
+                </div>
+              </div>
+              <div class="form-group row my-4">
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary rounded-pill">Login</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="no_account text-center col-12">Don’t have an account ? <a href="javascript:void(0)" class="sign_up_btn" data-target="#signup_dialog" data-toggle="modal" data-dismiss="modal">Sign up</a></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login Modal END --> 
+
+    <!-- Register Modal -->
+    <div class="modal login_signup_popup" id="signup_dialog">
+      <div class="modal-dialog modal-dialog-centered"> 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body"> 
+            <!-- Register -->
+            <h4 class="title text-center mb-5">Register</h4>
+
+            <form class="signUp_form">
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="text" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="password" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="password" placeholder="Retype Password">
+              </div>
+              <div class="form-group my-4">
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary rounded-pill">Login</button>
+                </div>
+              </div>
+            </form>
+            <a href="javascript:void(0)" data-target="#login_modal" data-toggle="modal" data-dismiss="modal"><i class="fa fa-arrow-left"></i> Previous</a> </div>
+        </div>
+      </div>
+    </div>
+    <!-- Register Modal END -->
+    
+
+    <!-- Inner Carsoul Banner -->
+    <div class="listing_detail_slider owl-carousel owl-theme">
+      <div class="item"><img src="images/para-web-14.png" alt="detail-theme" class="w-100"></div>
+      <div class="item"><img src="images/para-web-14.png" alt="detail-theme" class="w-100"></div>
+      <div class="item"><img src="images/para-web-14.png" alt="detail-theme" class="w-100"></div>
+    </div>
+    <!-- Inner Carsoul Banner -->
+
+    <!-- Listing Details section -->
+    <section id="listing_details" class="section listing_details-area py-5">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-8">
+            <div class="heading_block d-md-flex pb-4 mb-4">
+              <div class="flex-md-fill">
+                <h3 class="title font-weight-bold">Date Gourmet</h3>
+                <div class="pb-md-0 pb-2">
+                  <ul class="list-inline reviews d-inline-block">
+                    <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star checked"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                  </ul>
+                  <p class="d-inline-block mb-0 pl-2">2 reviews</p>
+                </div>
+              </div>
+              <div class="flex-md-fill text-md-right">
+                <a class="wishlist_btn btn btn-primary border-0 rounded-pill" href="javascript:void(0)"><i class="far fa-heart"></i> Add to wishlist</a>
+              </div>
+            </div><!-- heading_block -->
+            <div class="description_block pb-2 mb-4">
+              <h4 class="title mb-3">Descripción</h4>
+              <p class="text-muted mb-3" align="justify">
+                
+Salones De Belleza
+
+              </p>
+
+            </div><!-- description_block -->
+
+
+
+            <div class="map_block pb-4 mb-4">
+              <h4 class="title mb-3">
+localización</h4>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1970.3501792702837!2d-79.52960809212951!3d8.99969499838529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca9954d616513%3A0x9ef0b99b23521a22!2sGate%20Panam%C3%A1!5e0!3m2!1ses!2sve!4v1584591417348!5m2!1ses!2sve"  width="800" height="360" style="border:0; width: 100%;" allowfullscreen></iframe>
+            </div><!-- map_block -->
+
+            <div class="r_write_block">
+              <h4 class="title font-weight-normal mb-4">Contactos</h4>
+              <form class="review_form">
+                <div class="form-group row mb-0">
+                  <div class="col-md-6 col-12 mb-3">
+                    <input type="text" class="form-control rounded-pill" placeholder="Full Name" name="username" />
+                  </div>
+                  <div class="col-md-6 col-12 mb-3">
+                    <input type="text" class="form-control rounded-pill" placeholder="Email" name="email" />
+                  </div>
+                </div>
+                <div class="form-group row mb-0">
+                  <div class="col-md-12 mb-3">
+                    <textarea class="form-control rounded--lg resize-0" placeholder="Your review" name="review" rows="6"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row mb-0">
+                  <div class="col-md-6 col-12 mb-3">
+                    <div class="media-body-footer review_block p-0">
+                      <ul class="list-inline reviews">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12 text-md-right">
+                    <input type="submit" class="btn btn-primary button" value="Enviar" />
+                  </div>
+                </div>
+              </form>
+            </div><!-- r_write_block -->
+          </div><!-- .col-md -->
+
+          <div class="col-md-4">
+            <div class="nearbyListing_block border-bottom pb-2 mb-4">
+              <h4 class="title font-weight-bold mb-3">Detalles de contacto</h4>
+              <ul class="list-unstyled text-muted list-pb-3 mb-0">
+                <li><i class="fas fa-map-marker-alt"></i>
+Tumba Muerto, Bethania, Los Ángeles, Cl 63, Oe, Panamá
+                </li>
+                <li><a href="tel:215-123-4567" class="text-muted"><i class="fas fa-phone"></i>
+
++507 260-4456
+
+                </a></li>
+                <li><a href="#" class="text-muted"><i class="fas fa-envelope"></i>
+
+
+                </a>
+                </li>
+              </ul>
+            </div><!-- nearbyListing_block -->
+            <div class="sendMessage_block border-bottom pb-4 mb-4">
+              <h4 class="title mb-3">Enviar Mensaje</h4>
+              <form class="review_form">
+                <div class="form-group">
+                  <input type="text" class="form-control rounded-pill" placeholder="Nombre y apellido" name="username" />
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control rounded-pill" placeholder="Email" name="email" />
+                </div>
+                <div class="form-group">
+                  <input type="tel" class="form-control rounded-pill" placeholder="Teléfono" name="tel" />
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control rounded--lg resize-0" placeholder="Mensaje" name="message" rows="6"></textarea>
+                </div>
+                <input type="submit" class="send_btn btn btn-primary rounded-pill w-100" value="enviar" />
+              </form>
+            </div><!-- sendMessage_block -->
+            <div class="hours_block">
+              <h4 class="title mb-3">
+Horas de trabajo</h4>
+              <ul class="list-unstyled text-muted list-pb-2 mb-0">
+                <li>
+lunes <span class="float-right">9 AM - 5 PM</span></li>
+                <li>
+martes <span class="float-right">9 AM - 5 PM</span></li>
+                <li>miércoles <span class="float-right">9 AM - 5 PM</span></li>
+                <li>
+jueves <span class="float-right">9 AM - 5 PM</span></li>
+                <li>
+viernes <span class="float-right">9 AM - 5 PM</span></li>
+
+              </ul>
+            </div><!-- hours_block -->
+          </div><!-- .col-md -->
+        </div><!-- .row -->
+
+      </div>
+    </section>
+    <!-- Listing Details section END -->
+
+
+    <!-- Footer section -->
+    <footer>
+      <div id="footer" class="footer-area bg-secondary py-5">
+        <div class="container">
+          <div class="row">
+         
+            <div class="col-lg-4 col-sm-6">
+              <div class="f_title">
+                <h5></h5>
+              </div>
+              <div class="f_links">
+<img src="images/logo.png">
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="f_title">
+                <h5>Contáctanos</h5>
+              </div>
+              <address class="m-0">
+              <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i> Avenida Santa Elena c/c calle 93 Este, Edif JJ Window Tint, Parque Lefreve Panamá City, Panamá</li>
+                <li><a href="tel:215-123-4567"><i class="fas fa-phone"></i> (507) 66457302</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> ventas@cytii.com</a></li>
+              </ul>
+              </address>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="f_title">
+                <h5>Redes sociales</h5>
+              </div>
+              <div class="f_social_links">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-vk"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-area " style="background-color: black; color: #fff;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="copyright_text">Copyright 2020 © CYTII. Todos los derechos reservados.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section END --> 
+
+    <!-- Back to Top -->
+    <div class='scrolltop'>
+      <div class='scroll'><i class="fas fa-arrow-up"></i></div>
+    </div>
+    <!-- Back to Top End -->
+    
+    <!-- Mobile Menu -->
+    <div class="bsnav-mobile">
+      <div class="bsnav-mobile-overlay"></div>
+      <div class="navbar">
+        <button class="navbar-toggler toggler-spring active close_menu"><span class="navbar-toggler-icon"></span></button>
+      </div>
+    </div>
+    <!-- Mobile Menu END -->
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- bootstrap-4.3.1-dist JS -->
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/bsnav-master/dist/bsnav.min.js"></script>
+    <script type="text/javascript" src="assets/gijgo-combined/js/gijgo.min.js"></script>
+    <!-- OwlCarousel2-2.3.4 JS -->
+    <script type="text/javascript" src="assets/OwlCarousel2/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/select2/dist/js/select2.full.min.js"></script>
+    <!-- Template Main JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+  </body>
+</html>

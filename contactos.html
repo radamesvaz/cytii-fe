@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- bootstrap-4.3.1-dist CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Fontawesome-free-5.6.3-web CSS -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <!-- bsnav-master CSS -->
+    <link rel="stylesheet" href="assets/bsnav-master/dist/bsnav.min.css">
+    <!-- gijgo-combined CSS -->
+    <link rel="stylesheet" href="assets/gijgo-combined/css/gijgo.min.css">
+    <!-- OwlCarousel2-2.3.4 CSS -->
+    <link rel="stylesheet" href="assets/OwlCarousel2/dist/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel2/dist/owl.theme.default.min.css">
+    <!-- select2 CSS-->
+    <link rel="stylesheet" href="assets/select2/dist/css/select2.min.css">
+    <!-- Template Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+  <title>CYTII - Guía Digital de las empresas, negocios y servicios en la Ciudad de Panamá. </title>
+</head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="header navbar navbar-expand-lg bg-secondary bsnav">
+      <div class="container">
+
+        <a class="navbar-brand logo" href="index.html">
+          <img src="images/logo.png" alt="logo" class="img-fluid">
+        </a><!-- /.logo -->        
+
+        <div class="collapse navbar-collapse justify-content-md-start px-lg-4">
+          <ul class="navbar-nav navbar-mobile">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Inicio </a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="quienes-somos.html">Quiénes somos</a>
+
+</li>
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="categorias.html">Categorias</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="eventos.html">Eventos</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="blog.html">Blog</a>
+
+            </li>
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="membresia.html">Membresia</a>
+
+            </li>
+
+
+            <li class="nav-item dropdown dropdown-right">
+              <a class="nav-link" href="contactos.html">Contactos</a>
+
+            </li>
+
+
+</ul>
+        </div><!-- /.navbar-collapse -->
+        
+
+        
+        <!-- Menu Icon -->
+        <button class="navbar-toggler toggler-spring">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu Icon END -->
+
+      </div><!-- /.container -->
+    </header>
+    <!-- Header END -->
+
+
+    <!-- Login Modal -->
+    <div class="modal login_signup_popup" id="login_modal">
+      <div class="modal-dialog modal-dialog-centered"> 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body"> 
+            <!-- Login -->
+            <h4 class="title text-center mb-5">Login</h4>
+
+            <form class="login_form">
+              <div class="form-group row">
+                <div class="col-12">
+                  <input class="form-control rounded-pill" type="email" placeholder="Enter your Email">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  <input class="form-control rounded-pill" type="password" placeholder="Enter your Password">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label class="custom_checkbox">Remember me
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-sm-6 text-sm-right">
+                  <a class="lost_password" href="#">Lost Your Password?</a>
+                </div>
+              </div>
+              <div class="form-group row my-4">
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary rounded-pill">Login</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="no_account text-center col-12">Don’t have an account ? <a href="javascript:void(0)" class="sign_up_btn" data-target="#signup_dialog" data-toggle="modal" data-dismiss="modal">Sign up</a></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login Modal END --> 
+
+    <!-- Register Modal -->
+    <div class="modal login_signup_popup" id="signup_dialog">
+      <div class="modal-dialog modal-dialog-centered"> 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body"> 
+            <!-- Register -->
+            <h4 class="title text-center mb-5">Register</h4>
+
+            <form class="signUp_form">
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="text" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="password" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <input class="form-control rounded-pill" type="password" placeholder="Retype Password">
+              </div>
+              <div class="form-group my-4">
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary rounded-pill">Login</button>
+                </div>
+              </div>
+            </form>
+            <a href="javascript:void(0)" data-target="#login_modal" data-toggle="modal" data-dismiss="modal"><i class="fa fa-arrow-left"></i> Previous</a> </div>
+        </div>
+      </div>
+    </div>
+    <!-- Register Modal END -->
+    
+
+    <!-- Inner Banner -->
+    <section class="inner_banner privacy_inner_banner d-flex align-items-center img_bg py-5 position-relative" style="background:url(images/inner_banner_bg_theme_01.jpg);">
+      <div class="bg-overlay position-absolute"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-white">
+            <h1 class="banner_title mb-0">Contáctanos</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Inner Banner -->
+
+    <!-- Privacy Section -->
+    <section class="section contactUs_section py-5">
+      <div class="container">
+
+        <div class="row mb-5">
+          <div class="col-12">
+            <h4 class="mb-3">
+Ponerse en contacto</h4>
+            <p class="text-gray-dark mb-4">Ingrese sus datos y nos pondremos en contacto con usted en breve.</p>
+
+            <form class="contact_form form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="Nombre y apellido">
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+              <div class="form-group col-md-6">
+                <input type="tel" class="form-control" placeholder="Teléfono">
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="website">
+              </div>
+              <div class="form-group col-12">
+                <textarea class="form-control" rows="8" placeholder="Mensaje"></textarea>
+              </div>
+              <div class="col-12">
+                <input type="submit" class="btn btn-primary" value="Enviar">
+              </div>
+            </form>
+          </div>
+        </div><!-- /.row -->
+
+        <div class="row mb-4">
+          <div class="col-md-4 mb-4">
+            <div class="card_info text-center">
+              <i class="fas fa-home fa-3x text-primary"></i>
+              <div class="card-body p-0">
+                <h4 class="card-title my-4 font-weight-normal">DIRECCIÓN</h4>
+             
+                <h6 class="text-primary">Avenida Santa Elena c/c calle 93 Este, Edif JJ Window Tint, Parque Lefreve Panamá City, Panamá</h6>
+              </div>
+            </div>
+          </div><!-- /.col -->
+          <div class="col-md-4 mb-4">
+            <div class="card_info text-center">
+              <i class="fas fa-envelope fa-3x text-primary"></i>
+              <div class="card-body p-0">
+                <h4 class="card-title my-4 font-weight-normal"><br> EMAIL</h4>
+            
+                <a href="#" target="_top" class="text-primary font-weight-semiBold fs-16">ventas@cytii.com</a>
+              </div>
+            </div>
+          </div><!-- /.col -->
+          <div class="col-md-4 mb-4">
+            <div class="card_info text-center">
+              <i class="fas fa-phone fa-3x text-primary"></i>
+              <div class="card-body p-0">
+                <h4 class="card-title my-4 font-weight-normal"><br> NÚMERO DE CONTACTO</h4>
+               
+                <a href="tel:+50766457302" class="text-primary font-weight-semiBold fs-16 d-block">(507) 66457302</a>
+             
+              </div>
+            </div>
+          </div><!-- /.col -->
+        </div>
+        
+      </div>
+    </section>
+    <!-- About Section --> 
+
+    <section class="section map_section">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.577506038722!2d-79.49741098572355!3d9.010966091753458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca9bdd14c78e7%3A0xb971c8b74a7b859e!2sJJ%20Window%20Tint%203M!5e0!3m2!1ses!2sve!4v1587409095749!5m2!1ses!2sve" width="1300" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+      <div id="footer" class="footer-area bg-secondary py-5">
+        <div class="container">
+          <div class="row">
+         
+            <div class="col-lg-4 col-sm-6">
+              <div class="f_title">
+                <h5></h5>
+              </div>
+              <div class="f_links">
+<img src="images/logo.png">
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="f_title">
+                <h5>Contáctanos</h5>
+              </div>
+              <address class="m-0">
+              <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i> Avenida Santa Elena c/c calle 93 Este, Edif JJ Window Tint, Parque Lefreve Panamá City, Panamá</li>
+                <li><a href="tel:215-123-4567"><i class="fas fa-phone"></i> (507) 66457302</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> ventas@cytii.com</a></li>
+              </ul>
+              </address>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="f_title">
+                <h5>Redes sociales</h5>
+              </div>
+              <div class="f_social_links">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-vk"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-area " style="background-color: black; color: #fff;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="copyright_text">Copyright 2020 © CYTII. Todos los derechos reservados.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section END --> 
+
+    <!-- Back to Top -->
+    <div class='scrolltop'>
+      <div class='scroll'><i class="fas fa-arrow-up"></i></div>
+    </div>
+    <!-- Back to Top End -->
+    
+    <!-- Mobile Menu -->
+    <div class="bsnav-mobile">
+      <div class="bsnav-mobile-overlay"></div>
+      <div class="navbar">
+        <button class="navbar-toggler toggler-spring active close_menu"><span class="navbar-toggler-icon"></span></button>
+      </div>
+    </div>
+    <!-- Mobile Menu END -->
+
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- bootstrap-4.3.1-dist JS -->
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/bsnav-master/dist/bsnav.min.js"></script>
+    <script type="text/javascript" src="assets/gijgo-combined/js/gijgo.min.js"></script>
+    <!-- OwlCarousel2-2.3.4 JS -->
+    <script type="text/javascript" src="assets/OwlCarousel2/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/select2/dist/js/select2.full.min.js"></script>
+    <!-- Template Main JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+  </body>
+</html>
