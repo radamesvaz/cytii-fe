@@ -14,6 +14,7 @@ const crearResultado = (res) => {
 }
 */
 const buscarEmpresa = (e) => {
+    
     e.preventDefault();
 
         if(empresa.value || zona.value || categoria.value){
@@ -53,9 +54,6 @@ const buscarEmpresa = (e) => {
                 resultado.appendChild(li);
         }
     
-        
-            
-
 }
 
 boton.addEventListener("click", buscarEmpresa);
