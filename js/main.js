@@ -6,16 +6,20 @@ let empresa = document.getElementById("empresas");
 let zona = document.getElementById("zona");
 let resultado = document.getElementById("resultado");
 let categoria = document.getElementById("categoria");
-/*
-const crearResultado = (res) => {
-    let li = document.createElement("li");
-    li.appendChild(document.createTextNode(res.nombre));
-    resultado.appendChild(li);
-}
-*/
+
+
 const buscarEmpresa = (e) => {
     
     e.preventDefault();
+
+    const removeElementsByClass = () => {
+        let elements = document.getElementsByClassName("col-lg-4 col-sm-6 col-12 col-wrap");
+        while(elements.length > 0){
+            elements[0].parentNode.removeChild(elements[0]);
+        }
+    };
+    removeElementsByClass();
+  
 
         if(empresa.value || zona.value || categoria.value){
             const data = { empresas: empresa.value, 
@@ -35,6 +39,7 @@ const buscarEmpresa = (e) => {
                             for(let i = 0; i < res.length; i++){
 
                                 let div1 = document.createElement('div');
+                                    div1.id='div1'
                                     div1.className="col-lg-4 col-sm-6 col-12 col-wrap";
 
                                 let div2 = document.createElement('div');
