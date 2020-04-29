@@ -33,13 +33,49 @@ const buscarEmpresa = (e) => {
                     return data.json()
                     }).then( res => {
                             for(let i = 0; i < res.length; i++){
-                                let li = document.createElement("li");
+
+                                let div1 = document.createElement('div');
+                                    div1.className="col-lg-4 col-sm-6 col-12 col-wrap";
+
+                                let div2 = document.createElement('div');
+                                    div2.className="item";
+
+
+                                let div3 = document.createElement('div');
+                                    div3.className="card product-card";
+
+                                let img = document.createElement('img');
+                                    img.src=`images/newImg/${res[i].id}.png`;
+                                   // img.src="images/para-web-04.png";
+                                    img.alt="best-image";
+                                    img.className="card-img-top product-theme";
+
+                                let div4 = document.createElement('div');
+                                    div4.className="card-top-body";                               
+                                   // div4.appendChild(img);
+                                    
+                                    
+                                    
+                                let div5 = document.createElement('div');
+                                    div5.className="card-img-overlay product-detail";
+
+                                
                                 let a = document.createElement('a');
-                                a.href=res[i].link;
-                                a.textContent=res[i].nombre;
-                                a.className='link-buscar';
-                                li.appendChild(a);
-                                resultado.appendChild(li);
+                                    a.href=res[i].link;
+                                    a.textContent=res[i].nombre;
+                                    a.className='link-buscar';
+                               
+
+                               
+                                //img.appendChild(a);
+                                img.appendChild(div5);
+                                div4.appendChild(img);
+                                a.appendChild(div4);
+                                div3.appendChild(a);
+                                div2.appendChild(div3);
+                                div1.appendChild(div2);
+                                resultado.appendChild(div1);
+     
                                 
                             }
                 });
