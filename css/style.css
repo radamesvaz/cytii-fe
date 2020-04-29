@@ -33,6 +33,7 @@ p {
 /*Resultados Busqueda*/
 .link-buscar{
     color:black;
+    font-weight: bold;
 }
 
 .buscar-error{
