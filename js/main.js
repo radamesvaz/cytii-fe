@@ -61,6 +61,7 @@ const buscarEmpresa = (e) => {
 
                                 
                                 let a = document.createElement('a');
+                                    a.target="_blank";
                                     a.href=res[i].link;
                                     a.textContent=res[i].nombre;
                                     a.className='link-buscar';
