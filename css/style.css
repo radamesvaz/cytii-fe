@@ -3274,6 +3274,7 @@ input:checked+span.slider:before {
     ul.listing_action li+li {
         margin: 0px;
     }
+   
 }
 
 
@@ -3329,6 +3330,14 @@ input:checked+span.slider:before {
     .review_card p a {
         display: block;
     }
+    .pa3{
+        padding-bottom: 15px;
+    }
+    .center{
+        width: 100%;
+        display: inline-block;
+    }
+   
 }
 
 
@@ -3352,4 +3361,9 @@ input:checked+span.slider:before {
         padding-right: 0px !important;
         max-width: 140px;
     }
+
+    .pa3{
+        padding-bottom: 15px;
+    }
 }
+
