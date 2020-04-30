@@ -107,7 +107,7 @@ const buscarEmpresa = (e) => {
 
 boton.addEventListener("click", buscarEmpresa);
 
-
+/*--------------------- Fin boton buscar--------------------- */
 
 
 $(document).ready(function($) {

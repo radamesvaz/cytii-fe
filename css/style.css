@@ -3334,7 +3334,7 @@ input:checked+span.slider:before {
         padding-bottom: 15px;
     }
     .center{
-        width: 100%;
+        
         display: inline-block;
     }
    
