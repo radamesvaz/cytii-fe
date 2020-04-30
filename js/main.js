@@ -6,20 +6,20 @@ let empresa = document.getElementById("empresas");
 let zona = document.getElementById("zona");
 let resultado = document.getElementById("resultado");
 let categoria = document.getElementById("categoria");
+let descripcion = document.getElementById("des-busqueda");
 
+const removeElementsByClass = (elementName) => {
+    let elements = document.getElementsByClassName(elementName);
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+};
 
 const buscarEmpresa = (e) => {
-    
     e.preventDefault();
-
-    const removeElementsByClass = () => {
-        let elements = document.getElementsByClassName("col-lg-4 col-sm-6 col-12 col-wrap");
-        while(elements.length > 0){
-            elements[0].parentNode.removeChild(elements[0]);
-        }
-    };
-    removeElementsByClass();
-  
+    window.location.href = "#redirect-search";
+    removeElementsByClass("col-lg-4 col-sm-6 col-12 col-wrap");
+    removeElementsByClass("buscar-error");
 
         if(empresa.value || zona.value || categoria.value){
             const data = { empresas: empresa.value, 
@@ -79,6 +79,16 @@ const buscarEmpresa = (e) => {
                 });
 
                 empresa.value = '';
+                if( zona.value && categoria.value ){
+                    let br = document.createElement('br');
+                    descripcion.textContent = `El resultado para ${categoria.value} en ${zona.value} es:`;
+                    descripcion.appendChild(br);
+                } else if( zona.value && !categoria.value ){
+                    descripcion.textContent = `El resultado para ${zona.value} es:`;
+                } else if( !zona.value && categoria.value ){
+                    descripcion.textContent = `El resultado para ${categoria.value} es:`;
+                }
+                
                 
         } else {
             let li = document.createElement("li");
@@ -90,6 +100,7 @@ const buscarEmpresa = (e) => {
 }
 
 boton.addEventListener("click", buscarEmpresa);
+
 
 
 

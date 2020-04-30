@@ -190,11 +190,16 @@
 
               <form class="search-form">
                 <div class="form-group w-100 d-md-flex mb-0">
-                  <div class="col-md-4 col-12 center">
+                  <div class="col-md-4 col-12">
                     <input class="form-control" id="empresas" type="text" placeholder="Empresas">
                   </div>
                   <div class="col-md-4 col-12 pa3">
-                    <select id="zona" class="form-control js-example-basic-single">
+                 <!--   <div class="input-group">
+                      <input class="form-control" type="text" id="zona" value="" placeholder="Localización">
+                      <span class="input-group-addon"><i class="fas fa-map-marker-alt"></i></span>
+                    </div> --> 
+                    
+                     <select id="zona" class="form-control js-example-basic-single">
                       <option value="">Zonas</option>
                       <option>Bella Vista</option>
                       <option >Chorrera</option>
@@ -209,7 +214,7 @@
                       <option>Parque Lefevre</option>
                       <option>Río Abajo</option>
                       <option>San Francisco</option>
-                    </select>
+                    </select>  
                     
                   </div>
                   <div class="col-md-4 col-12">
@@ -229,21 +234,16 @@
                     </select>
                   </div>
                 </div>
-                <a href="#targetname">
+                
                 <button 
                 type="submit" 
                 id="buscar" 
                 class="btn btn-primary rounded-pill button"
+                
                 >Buscar</button>
-              </a>
+              
                 
               </form>
-              <!--
-                <ul id="resultado" > 
-                 
-                </ul>
-
-              -->  
             </div>
 
           </div>
@@ -390,14 +390,15 @@
     <!-- Top Header serach Section END -->
 
     <!-- Item List Section -->
-    <section class="section item_list_section bg-light py-5">
+    <section class="section item_list_section bg-light py-5" id='redirect-search'>
       <div class="container">
 
         <div class="row">
           <div class="col-lg-6 offset-lg-3">
-            <div class="s-heading-card text-center">
+            <div class="s-heading-card text-center" >
               <h2>EMPRESAS DESTACADAS</h2>
               <p>Descubra cómo Cytii puede ayudarlo a encontrar todo lo que desea</p>
+              <h5 id='des-busqueda'> <br></h5>
             </div>
           </div>
         </div>
@@ -430,7 +431,7 @@
           <div class="col-12">
             <div class="search_item_wrap">
               <div class="row" id="resultado">
-                <a name="targetname"></a>
+                
 
         <!--     <div class="col-lg-4 col-sm-6 col-12 col-wrap">
                   <div class="item">
