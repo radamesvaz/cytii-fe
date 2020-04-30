@@ -15,9 +15,15 @@ const removeElementsByClass = (elementName) => {
     }
 };
 
+$(boton).on("click" ,function(){
+    $('html, body').animate({
+        scrollTop: $("#redirect-search").offset().top
+    }, 600);
+});
+
 const buscarEmpresa = (e) => {
     e.preventDefault();
-    window.location.href = "#redirect-search";
+   
     removeElementsByClass("col-lg-4 col-sm-6 col-12 col-wrap");
     removeElementsByClass("buscar-error");
 
