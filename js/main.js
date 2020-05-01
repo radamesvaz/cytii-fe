@@ -1,4 +1,59 @@
+//---------------------------------------- Cargando la pagina
 
+window.addEventListener('load', 
+  function() { 
+    const options = {
+        method: 'get'
+    };
+    fetch('https://cytii-rv.herokuapp.com/', options)
+    .then(data => {
+        return data.json()
+        }).then( res => {
+            for(let i = 0; i < res.length; i++){
+
+                let div1 = document.createElement('div');
+                    div1.id='div1'
+                    div1.className="col-lg-4 col-sm-6 col-12 col-wrap";
+
+                let div2 = document.createElement('div');
+                    div2.className="item";
+
+
+                let div3 = document.createElement('div');
+                    div3.className="card product-card";
+
+                let img = document.createElement('img');
+                    img.src=`images/newImg/${res[i].id}.png`;
+                    img.alt="best-image";
+                    img.className="card-img-top product-theme";
+
+                let div4 = document.createElement('div');
+                    div4.className="card-top-body";                               
+
+                let div5 = document.createElement('div');
+                    div5.className="card-img-overlay product-detail";
+
+                let a = document.createElement('a');
+                    a.target="_blank";
+                    a.href=res[i].link;
+                    a.textContent=res[i].nombre;
+                    a.className='link-buscar';
+
+                    img.appendChild(div5);
+                    div4.appendChild(img);
+                    a.appendChild(div4);
+                    div3.appendChild(a);
+                    div2.appendChild(div3);
+                    div1.appendChild(div2);
+                    resultado.appendChild(div1);
+
+                
+            }
+
+        });
+            
+
+  }, false);
 
 // ------------- Boton Buscar --------------------
 let boton = document.getElementById("buscar");
@@ -7,6 +62,7 @@ let zona = document.getElementById("zona");
 let resultado = document.getElementById("resultado");
 let categoria = document.getElementById("categoria");
 let descripcion = document.getElementById("des-busqueda");
+let error = false;
 
 const removeElementsByClass = (elementName) => {
     let elements = document.getElementsByClassName(elementName);
@@ -42,66 +98,83 @@ const buscarEmpresa = (e) => {
                 .then(data => {
                     return data.json()
                     }).then( res => {
-                            for(let i = 0; i < res.length; i++){
+                            if(res === '!resultados'){
 
-                                let div1 = document.createElement('div');
-                                    div1.id='div1'
-                                    div1.className="col-lg-4 col-sm-6 col-12 col-wrap";
-
-                                let div2 = document.createElement('div');
-                                    div2.className="item";
-
-
-                                let div3 = document.createElement('div');
-                                    div3.className="card product-card";
-
-                                let img = document.createElement('img');
-                                    img.src=`images/newImg/${res[i].id}.png`;
-                                    img.alt="best-image";
-                                    img.className="card-img-top product-theme";
-
-                                let div4 = document.createElement('div');
-                                    div4.className="card-top-body";                               
-    
-                                let div5 = document.createElement('div');
-                                    div5.className="card-img-overlay product-detail";
-
-                                let a = document.createElement('a');
-                                    a.target="_blank";
-                                    a.href=res[i].link;
-                                    a.textContent=res[i].nombre;
-                                    a.className='link-buscar';
-
-                                    img.appendChild(div5);
-                                    div4.appendChild(img);
-                                    a.appendChild(div4);
-                                    div3.appendChild(a);
-                                    div2.appendChild(div3);
-                                    div1.appendChild(div2);
-                                    resultado.appendChild(div1);
-     
+                                descripcion.textContent = `No hemos conseguido lo que buscas`;
                                 
+                            } else {
+                                for(let i = 0; i < res.length; i++){
+
+                                    let div1 = document.createElement('div');
+                                        div1.id='div1'
+                                        div1.className="col-lg-4 col-sm-6 col-12 col-wrap";
+    
+                                    let div2 = document.createElement('div');
+                                        div2.className="item";
+    
+    
+                                    let div3 = document.createElement('div');
+                                        div3.className="card product-card";
+    
+                                    let img = document.createElement('img');
+                                        img.src=`images/newImg/${res[i].id}.png`;
+                                        img.alt="best-image";
+                                        img.className="card-img-top product-theme";
+    
+                                    let div4 = document.createElement('div');
+                                        div4.className="card-top-body";                               
+        
+                                    let div5 = document.createElement('div');
+                                        div5.className="card-img-overlay product-detail";
+    
+                                    let a = document.createElement('a');
+                                        a.target="_blank";
+                                        a.href=res[i].link;
+                                        a.textContent=res[i].nombre;
+                                        a.className='link-buscar';
+    
+                                        img.appendChild(div5);
+                                        div4.appendChild(img);
+                                        a.appendChild(div4);
+                                        div3.appendChild(a);
+                                        div2.appendChild(div3);
+                                        div1.appendChild(div2);
+                                        resultado.appendChild(div1);
+         
+                                    
+                                }
+    
                             }
                 });
 
-                empresa.value = '';
-                if( zona.value && categoria.value ){
-                    let br = document.createElement('br');
-                    descripcion.textContent = `El resultado para ${categoria.value} en ${zona.value} es:`;
-                    descripcion.appendChild(br);
-                } else if( zona.value && !categoria.value ){
-                    descripcion.textContent = `El resultado para ${zona.value} es:`;
-                } else if( !zona.value && categoria.value ){
-                    descripcion.textContent = `El resultado para ${categoria.value} es:`;
-                }
                 
                 
-        } else {
-            let li = document.createElement("li");
-                li.appendChild(document.createTextNode('Por favor introduzca un valor'));
-                li.className="buscar-error"
-                resultado.appendChild(li);
-        }
+                    if( zona.value && categoria.value && !empresa.value){
+                        descripcion.textContent = `El resultado para ${categoria.value} en ${zona.value} es:`;
+                    } else if( zona.value && !categoria.value  && !empresa.value){
+                        descripcion.textContent = `El resultado para ${zona.value} es:`;
+                    } else if( !zona.value && categoria.value  && !empresa.value){
+                        descripcion.textContent = `El resultado para ${categoria.value} es:`;
+                    } else if( empresa.value && zona.value && !categoria.value ){
+                        descripcion.textContent = `El resultado para ${empresa.value} en ${zona.value} es:`;
+                    } else if( empresa.value && !zona.value && categoria.value ){
+                        descripcion.textContent = `El resultado para ${empresa.value} como ${categoria.value} es:`;
+                    } else if( empresa.value && !zona.value && !categoria.value ){
+                        descripcion.textContent = `El resultado para ${empresa.value} es:`;
+                    }
+                
+
+
+                    
+            } else {
+                let li = document.createElement("li");
+                    li.appendChild(document.createTextNode('Por favor introduzca un valor'));
+                    li.className="buscar-error"
+                    resultado.appendChild(li);
+            }
+                
+            empresa.value = '';
+       
     
 }
 
