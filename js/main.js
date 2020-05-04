@@ -21,7 +21,7 @@ window.addEventListener('load',
 
                 let div1 = document.createElement('div');
                     div1.id='div1'
-                    div1.className="col-lg-4 col-sm-6 col-12 col-wrap";
+                    div1.className="col-lg-4 col-sm-6 col-12 col-wrap tc";
 
                 let div2 = document.createElement('div');
                     div2.className="item";
@@ -115,7 +115,7 @@ const buscarEmpresa = (e) => {
 
                                     let div1 = document.createElement('div');
                                         div1.id='div1'
-                                        div1.className="col-lg-4 col-sm-6 col-12 col-wrap";
+                                        div1.className="col-lg-4 col-sm-6 col-12 col-wrap tc";
     
                                     let div2 = document.createElement('div');
                                         div2.className="item";
