@@ -1,7 +1,15 @@
 //---------------------------------------- Cargando la pagina
 
+
+/*
+PMS 293 = #0051ba;
+PMS 2935 = #005bbf;
+PMS 300 = #0072c6;
+*/
+
+
 window.addEventListener('load', 
-  function() { 
+   getCards = () => { 
     const options = {
         method: 'get'
     };
@@ -167,10 +175,8 @@ const buscarEmpresa = (e) => {
 
                     
             } else {
-                let li = document.createElement("li");
-                    li.appendChild(document.createTextNode('Por favor introduzca un valor'));
-                    li.className="buscar-error"
-                    resultado.appendChild(li);
+                getCards();
+                descripcion.textContent = ``;
             }
                 
             empresa.value = '';

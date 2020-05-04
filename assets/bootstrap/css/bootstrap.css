@@ -2400,8 +2400,8 @@ fieldset:disabled a.btn {
 
 .btn-danger:hover {
   color: #fff;
-  background-color: #c82333;
-  border-color: #bd2130;
+  background-color: #0062cc;
+  border-color: #0062cc;
 }
 
 .btn-danger:focus, .btn-danger.focus {
@@ -2655,14 +2655,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-danger {
-  color: #dc3545;
-  border-color: #dc3545;
+  color: #0062cc;
+  border-color: #0062cc;
 }
 
 .btn-outline-danger:hover {
   color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
+  background-color: #0062cc;
+  border-color: #0062cc;
 }
 
 .btn-outline-danger:focus, .btn-outline-danger.focus {
