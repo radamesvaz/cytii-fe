@@ -13,7 +13,7 @@ window.addEventListener('load',
     const options = {
         method: 'get'
     };
-    fetch('http://cytii.com/', options)
+    fetch('https://cytii-rv.herokuapp.com/', options)
     .then(data => {
         return data.json()
         }).then( res => {
@@ -102,7 +102,7 @@ const buscarEmpresa = (e) => {
                 },
                     body: JSON.stringify(data)
                 };
-                fetch('http://cytii.com/buscar', options)
+                fetch('https://cytii-rv.herokuapp.com/buscar', options)
                 .then(data => {
                     return data.json()
                     }).then( res => {
