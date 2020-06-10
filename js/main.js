@@ -42,7 +42,7 @@ window.addEventListener('load',
                     div5.className="card-img-overlay product-detail";
 
                 let a = document.createElement('a');
-                    a.target="_blank";
+                    a.target="_self";
                     a.href=res[i].link;
                     a.textContent=res[i].nombre;
                     a.className='link-buscar';
