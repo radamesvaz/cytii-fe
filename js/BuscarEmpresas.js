@@ -105,11 +105,10 @@ $(boton).on("click" ,function(){
 
 const buscarEmpresa = (e) => {
     e.preventDefault();
-   
-    removeElementsByClass("col-lg-4 col-sm-6 col-12 col-wrap");
-    removeElementsByClass("buscar-error");
-
         if( zona.value || categoria.value){
+            removeElementsByClass("col-lg-4 col-sm-6 col-12 col-wrap");
+            removeElementsByClass("buscar-error");
+
             const data = {  
                 empresas: "",
                 categoria: categoria.value,
@@ -184,21 +183,17 @@ const buscarEmpresa = (e) => {
                     } else if( !zona.value && categoria.value){
                         descripcion.textContent = `El resultado para ${categoria.value} es:`;
                     
-                
-
-
-                    
-            } else {
-                getCards();
-                descripcion.textContent = ``;
-            }
-                
-            
-       
+                      /*  } else {
+                            getCards();
+                            descripcion.textContent = ``;*/
+                        }
+                            
     
-}
+                    }
+                    empresa.value='';
+    }
 
-}
+
 
 // Campo de buscar Empresa
 const state = {
@@ -216,7 +211,6 @@ const filtrarEmpresas = (e) => {
         return i.nombre.toLowerCase().includes(state.searchField.toLowerCase());
       });
 
-      console.log(empresasFiltradas)
 
       removeElementsByClass("col-lg-4 col-sm-6 col-12 col-wrap");
       removeElementsByClass("buscar-error");
@@ -225,6 +219,7 @@ const filtrarEmpresas = (e) => {
 
 
 empresa.addEventListener('keyup', filtrarEmpresas);
+
 boton.addEventListener("click", buscarEmpresa);
 
 /*--------------------- Fin boton buscar--------------------- */
