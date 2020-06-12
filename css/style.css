@@ -1319,8 +1319,8 @@ header.bsnav.header2.fixed-header {
     background: #fff;
     border-radius: 50px;
     padding: 8px;
-    width: auto;
-    display: inline-block;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .banner2 .search-form .form-group [class*="col-"]:not(:last-child) {
@@ -3375,13 +3375,3 @@ input:checked+span.slider:before {
     }
 }
 
-/* Buscador */
-
-#buscar{
-    margin-left:30px;
-}
-
- #categoria{
-    margin-left:40px;
-    margin-right:40px;
- }

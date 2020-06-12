@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="css/style.css">
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="css/responsive.css">
-   <title>CYTII - Tu Guía Digital de las empresas, negocios y servicios en la Ciudad de Panamá. </title>
+   <title>CYTII - Guía Digital de las empresas, negocios y servicios en la Ciudad de Panamá. </title>
     </head>
 
   <body>
@@ -183,14 +183,16 @@
         <div class="row">
           <div class="col-12">
 
-            <div class="search_block_content text-center text-white" id='contenedor-buscador'>
+            <div class="search_block_content text-center text-white">
 
-
+              <h1 class="title"></h1>
+              <p class="text mb-5"></p>
 
               <form class="search-form">
-                
                 <div class="form-group w-100 d-md-flex mb-0">
-
+                  <div class="col-md-4 col-12">
+                    <input class="form-control" id="empresas" type="text" placeholder="Empresas">
+                  </div>
                   <div class="col-md-4 col-12 center">
                     <div class="input-group">
           
@@ -232,15 +234,11 @@
                       <option>Seguros</option>
                     </select>
                   </div>
-                  <button 
-                  type="submit" 
-                  id="buscar" 
-                  class="btn btn-primary rounded-pill button">
-                  Buscar
-                </button>
                 </div>
 
-
+                <button 
+                type="submit" 
+                id="buscar" class="btn btn-primary rounded-pill button">Buscar</button>
                 
               </form>
             
@@ -713,5 +711,8 @@ ESTARÁ EN EL RADAR PARA QUE SUS CLIENTES POTENCIALES PUEDAN LOCALIZAR A SU EMPR
     <script type="text/javascript" src="assets/select2/dist/js/select2.full.min.js"></script>
     <!-- Template Main JS -->
     <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Buscar Empresas JS -->
+    <script src="js/BuscarEmpresas.js" ></script>
   </body>
 </html>
