@@ -193,7 +193,7 @@ const buscarEmpresa = (e) => {
     
                     }
 
-
+                    empresa.value='';
                     
                     
     }
@@ -206,6 +206,9 @@ if(event.keyCode === 13){
     $('html, body').animate({
         scrollTop: $("#redirect-search").offset().top
     }, 600);
+    setTimeout(function(){
+        empresa.value='';
+    }, 100);
 }
 }
 
