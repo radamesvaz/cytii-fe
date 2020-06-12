@@ -9,7 +9,7 @@
         }).then( res => {
             crearTarjetas(res);
             state.empresas = res;
-            console.log(state)
+         
             
         })
        
