@@ -97,17 +97,18 @@ const removeElementsByClass = (elementName) => {
     }
 };
 
-$(boton).on("click" ,function(){
+const buscarEmpresa = (e) => {
+
+    e.preventDefault();
     $('html, body').animate({
         scrollTop: $("#redirect-search").offset().top
     }, 600);
-});
 
-const buscarEmpresa = (e) => {
-    e.preventDefault();
         if( zona.value || categoria.value){
             removeElementsByClass("col-lg-4 col-sm-6 col-12 col-wrap");
             removeElementsByClass("buscar-error");
+            empresa.value=''
+
 
             const data = {  
                 empresas: "",
@@ -130,6 +131,9 @@ const buscarEmpresa = (e) => {
                                 descripcion.textContent = `No hemos conseguido lo que buscas`;
                                 
                             } else {
+
+
+
                                 for(let i = 0; i < res.length; i++){
 
                                     let div1 = document.createElement('div');
@@ -172,6 +176,7 @@ const buscarEmpresa = (e) => {
                                 }
     
                             }
+
                 });
 
                 
@@ -182,20 +187,28 @@ const buscarEmpresa = (e) => {
                         descripcion.textContent = `El resultado para ${zona.value} es:`;
                     } else if( !zona.value && categoria.value){
                         descripcion.textContent = `El resultado para ${categoria.value} es:`;
-                    
-                      /*  } else {
-                            getCards();
-                            descripcion.textContent = ``;*/
+                
                         }
                             
     
                     }
-                    empresa.value='';
+
+
+                    
+                    
     }
 
 
 
-// Campo de buscar Empresa
+const buscarNombreEmpresaEnter = (e) => {
+if(event.keyCode === 13){
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#redirect-search").offset().top
+    }, 600);
+}
+}
+
 const state = {
     searchField: '',
  }
@@ -218,8 +231,14 @@ const filtrarEmpresas = (e) => {
 }
 
 
+
+
 empresa.addEventListener('keyup', filtrarEmpresas);
+empresa.addEventListener("keypress", buscarNombreEmpresaEnter);
 
 boton.addEventListener("click", buscarEmpresa);
+
+
+
 
 /*--------------------- Fin boton buscar--------------------- */
