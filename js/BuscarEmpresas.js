@@ -200,13 +200,13 @@ const buscarEmpresa = (e) => {
 
 }
 
-
+// Campo de buscar Empresa
 const state = {
     searchField: '',
  }
 
 
-// Campo de buscar Empresa
+
 
 const filtrarEmpresas = (e) => {
     
