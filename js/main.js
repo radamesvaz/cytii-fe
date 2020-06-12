@@ -65,7 +65,6 @@ window.addEventListener('load',
 
 // ------------- Boton Buscar --------------------
 let boton = document.getElementById("buscar");
-let empresa = document.getElementById("empresas");
 let zona = document.getElementById("zona");
 let resultado = document.getElementById("resultado");
 let categoria = document.getElementById("categoria");
@@ -91,10 +90,12 @@ const buscarEmpresa = (e) => {
     removeElementsByClass("col-lg-4 col-sm-6 col-12 col-wrap");
     removeElementsByClass("buscar-error");
 
-        if(empresa.value || zona.value || categoria.value){
-            const data = { empresas: empresa.value, 
+        if( zona.value || categoria.value){
+            const data = {  
+                empresas: "",
                 categoria: categoria.value,
-                zona: zona.value }
+                zona: zona.value 
+            }
                 const options = {
                     method: 'post',
                     headers: {
@@ -157,19 +158,13 @@ const buscarEmpresa = (e) => {
 
                 
                 
-                    if( zona.value && categoria.value && !empresa.value){
+                    if( zona.value && categoria.value){
                         descripcion.textContent = `El resultado para ${categoria.value} en ${zona.value} es:`;
-                    } else if( zona.value && !categoria.value  && !empresa.value){
+                    } else if( zona.value && !categoria.value){
                         descripcion.textContent = `El resultado para ${zona.value} es:`;
-                    } else if( !zona.value && categoria.value  && !empresa.value){
+                    } else if( !zona.value && categoria.value){
                         descripcion.textContent = `El resultado para ${categoria.value} es:`;
-                    } else if( empresa.value && zona.value && !categoria.value ){
-                        descripcion.textContent = `El resultado para ${empresa.value} en ${zona.value} es:`;
-                    } else if( empresa.value && !zona.value && categoria.value ){
-                        descripcion.textContent = `El resultado para ${empresa.value} como ${categoria.value} es:`;
-                    } else if( empresa.value && !zona.value && !categoria.value ){
-                        descripcion.textContent = `El resultado para ${empresa.value} es:`;
-                    }
+                    
                 
 
 
@@ -179,11 +174,12 @@ const buscarEmpresa = (e) => {
                 descripcion.textContent = ``;
             }
                 
-            empresa.value = '';
+            
        
     
 }
 
+}
 boton.addEventListener("click", buscarEmpresa);
 
 /*--------------------- Fin boton buscar--------------------- */
